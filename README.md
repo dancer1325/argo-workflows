@@ -12,36 +12,39 @@
 
 ## What is Argo Workflows?
 
-Argo Workflows is an open source container-native workflow engine for orchestrating parallel jobs on Kubernetes.
-Argo Workflows is implemented as a Kubernetes CRD (Custom Resource Definition).
+* Argo Workflows
+  * == workflow execution engine /
+    * is 
+      * open source
+      * container-native
+        * Kubernetes
+        * -> cloud agnostic
+      * light-weight
+      * scalable
+      * easy to use
+        * _Example:_ [Hera Python SDK -- for -- Argo Workflows](https://hera.readthedocs.io/en/stable/)
+    * allows
+      * orchestrating parallel jobs | Kubernetes
+        * -> run compute intensive jobs 
+  * [CNCF](https://cncf.io/) graduated project
+  * implemented -- as a -- Kubernetes CRD (Custom Resource Definition)
+  * [features](#features)
+  * [use cases](#use-cases)
 
-* Define workflows where each step is a container.
-* Model multi-step workflows as a sequence of tasks or capture the dependencies between tasks using a directed acyclic graph (DAG).
-* Easily run compute intensive jobs for machine learning or data processing in a fraction of the time using Argo Workflows on Kubernetes.
-
-Argo is a [Cloud Native Computing Foundation (CNCF)](https://cncf.io/) graduated project.
+* workflows
+  * ways to be defined
+    * == MULTIPLE steps /
+      * EACH steps == container
+      * can be
+        * sequential
+        * parallel
+    * == sequence of dependant tasks -- via -- directed acyclic graph (DAG)
 
 ## Use Cases
 
-* [Machine Learning pipelines](https://argo-workflows.readthedocs.io/en/latest/use-cases/machine-learning/)
-* [Data and batch processing](https://argo-workflows.readthedocs.io/en/latest/use-cases/data-processing/)
-* [Infrastructure automation](https://argo-workflows.readthedocs.io/en/latest/use-cases/infrastructure-automation/)
-* [CI/CD](https://argo-workflows.readthedocs.io/en/latest/use-cases/ci-cd/)
-* [Other use cases](https://argo-workflows.readthedocs.io/en/latest/use-cases/other/)
+* [here](docs/use-cases)
 
-## Why Argo Workflows?
-
-* Argo Workflows is the most popular workflow execution engine for Kubernetes.
-* Light-weight, scalable, and easier to use.
-    * Including for Python users through [the Hera Python SDK for Argo Workflows](https://hera.readthedocs.io/en/stable/).
-* Designed from the ground up for containers without the overhead and limitations of legacy VM and server-based environments.
-* Cloud agnostic and can run on any Kubernetes cluster.
-
-[Read what people said in our latest survey](https://blog.argoproj.io/argo-workflows-events-2023-user-survey-results-82c53bc30543)
-
-## Try Argo Workflows
-
-You can try Argo Workflows via one of the following:
+## Demo environments
 
 1. [Interactive Training Material](https://killercoda.com/argoproj/course/argo-workflows/)
 1. [Access the demo environment](https://workflows.apps.argoproj.io/workflows/argo)
@@ -50,64 +53,59 @@ You can try Argo Workflows via one of the following:
 
 ## Who uses Argo Workflows?
 
-[About 200+ organizations are officially using Argo Workflows](USERS.md)
+* [here](USERS.md)
 
 ## Ecosystem
 
-Just some of the projects that use or rely on Argo Workflows (complete list [here](https://github.com/akuity/awesome-argo#ecosystem-projects)):
-
-* [Argo Events](https://github.com/argoproj/argo-events)
-* [Couler](https://github.com/couler-proj/couler)
-* [Hera](https://github.com/argoproj-labs/hera-workflows)
-* [Katib](https://github.com/kubeflow/katib)
-* [Kedro](https://kedro.readthedocs.io/en/stable/)
-* [Kubeflow Pipelines](https://github.com/kubeflow/pipelines)
-* [Netflix Metaflow](https://metaflow.org)
-* [Onepanel](https://github.com/onepanelio/onepanel)
-* [Orchest](https://github.com/orchest/orchest/)
-* [Piper](https://github.com/quickube/piper)
-* [Ploomber](https://github.com/ploomber/ploomber)
-* [Seldon](https://github.com/SeldonIO/seldon-core)
-* [SQLFlow](https://github.com/sql-machine-learning/sqlflow)
+* [projects / use or rely](https://github.com/akuity/awesome-argo#ecosystem-projects)
 
 ## Client Libraries
 
-Check out our [Java, Golang, Python (Hera), and Typescript (Juno) clients](docs/client-libraries.md).
-
-## Quickstart
-
-* [Get started here](https://argo-workflows.readthedocs.io/en/latest/quick-start/)
-* [Walk-through examples](https://argo-workflows.readthedocs.io/en/latest/walk-through/)
+*  [Java, Golang, Python (Hera), and Typescript (Juno) clients](docs/client-libraries.md)
 
 ## Documentation
 
-[View the docs](https://argo-workflows.readthedocs.io/en/latest/)
+* [here](docs)
 
 ## Features
 
-An incomplete list of features Argo Workflows provides:
+TODO: check MORE / EACH feature?
 
-* UI to visualize and manage Workflows
-* Artifact support (S3, Artifactory, Alibaba Cloud OSS, Azure Blob Storage, HTTP, Git, GCS, raw, plugins)
-* Workflow templating to store commonly used Workflows in the cluster
-* Archiving Workflows after executing for later access
+* UI
+  * allows
+    * visualize & manage Workflows
+* Artifact support
+  * _Examples:_ S3, Artifactory, Alibaba Cloud OSS, Azure Blob Storage, HTTP, Git, GCS, raw, plugins
+* Workflow templating
+  * allows
+    * reusing Workflows
+* Archiving Workflows
+  * AFTER executing
+  * -- for -- later access
 * Scheduled workflows using cron
-* Server interface with REST API (HTTP and GRPC)
+* Server interface -- with -- REST API (HTTP and GRPC)
 * DAG or Steps based declaration of workflows
-* Step level input & outputs (artifacts/parameters)
+* Step level input & outputs
+  * (artifacts/parameters)
 * Loops
 * Parameterization
 * Conditionals
-* Timeouts (step & workflow level)
-* Retry (step & workflow level)
-* Resubmit (memoized)
+* Timeouts
+  * (step & workflow level)
+* Retry
+  * (step & workflow level)
+* Resubmit
+  * (memoized)
 * Suspend & Resume
 * Cancellation
 * K8s resource orchestration
-* Exit Hooks (notifications, cleanup)
+* Exit Hooks
+  * (notifications, cleanup)
 * Garbage collection of completed workflow
-* Scheduling (affinity/tolerations/node selectors)
-* Volumes (ephemeral/existing)
+* Scheduling
+  * (affinity/tolerations/node selectors)
+* Volumes
+  * (ephemeral/existing)
 * Parallelism limits
 * Daemoned steps
 * DinD (docker-in-docker)
@@ -129,6 +127,7 @@ An incomplete list of features Argo Workflows provides:
 
 ## Community Meetings
 
+* TODO: 
 We host monthly community meetings where we and the community showcase demos and discuss the current and future state of the project. Feel free to join us!
 For Community Meeting information, minutes and recordings, please [see here](https://bit.ly/argo-wf-cmty-mtng).
 
@@ -156,13 +155,3 @@ Participation in Argo Workflows is governed by the [CNCF Code of Conduct](https:
 * [Production-Ready AI Platform on Kubernetes](https://github.com/terrytangyuan/public-talks/tree/main/talks/kubecon-europe-2024-production-ai-platform-on-k8s)
 * [Argo integration review](http://dev.matt.hillsdon.net/2018/03/24/argo-integration-review.html)
 * TGI Kubernetes with Joe Beda: [Argo workflow system](https://www.youtube.com/watch?v=M_rxPPLG8pU&start=859)
-
-## Project Resources
-
-* [Argo Project GitHub organization](https://github.com/argoproj)
-* [Argo Website](https://argoproj.github.io/)
-* [Argo Slack](https://argoproj.github.io/community/join-slack)
-
-## Security
-
-See [SECURITY.md](SECURITY.md).
