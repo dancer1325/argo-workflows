@@ -1,7 +1,5 @@
 # Hello World
 
-Run this container directly from your shell with a `docker` command:
-
 ```bash
 $ docker run busybox echo "hello world"
 hello world
