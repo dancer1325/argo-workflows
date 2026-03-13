@@ -24,7 +24,8 @@
     kubectl apply -n argo -f https://github.com/argoproj/argo-workflows/releases/download/v4.0.2/install.yaml
     ```
 
-* You can use Kustomize to patch your preferred [configurations](managed-namespace.md)
+* if you want to personalize the Argo installation -> use Kustomize
+  * _Examples:_ [here](../manifests)
 
 #### Full CRDs
 
@@ -40,14 +41,18 @@
 
 ## Installation options
 
-Determine your base installation option.
-
-* A **cluster install** will watch and execute workflows in all namespaces
-* This is the default installation option when installing using the official release manifests.
-* A **namespace install** only executes workflows in the namespace it is installed in (typically `argo`)
-* Look for `namespace-install.yaml` in the [release assets](https://github.com/argoproj/argo-workflows/releases/latest).
-* A **managed namespace install**: only executes workflows in a separate namespace from the one it is installed in
-* See [Managed Namespace](managed-namespace.md) for more details.
+* **cluster install**
+  * watch & execute workflows | ALL namespaces
+  * | [install official releases](#official-release-manifests),
+    * default one
+  * [manifests](../manifests/cluster-install)
+* **namespace install**
+  * ONLY executes workflows | namespace / workflow is installed
+    * by default, "argo"
+  * [manifest](../manifests/namespace-install)
+* **managed namespace install**
+  * ONLY executes workflows | namespace / != | namespace is installed in
+  * [how to install](managed-namespace.md)
 
 ## Additional installation considerations
 
