@@ -2,9 +2,15 @@
 
 ## Diagram
 
-The following diagram shows the components of the Argo Workflows architecture. There are two Deployments: Workflow Controller and Argo Server. The former does all of the reconciling, and the latter serves the API. Note that the Controller can be used stand alone.
-
-The reconciliation code for the `WorkflowController` can be found in [`workflow/controller/controller.go`](https://github.com/argoproj/argo-workflows/blob/main/workflow/controller/controller.go). The Argo Server opens up an HTTP(S) listener at [`server/apiserver/argoserver.go`](https://github.com/argoproj/argo-workflows/blob/main/server/apiserver/argoserver.go).
+* deployments
+  * Workflow Controller
+    * reconciles
+    * uses
+      * ALSO standalone
+    * [source code](/workflow/controller/controller.go)
+  * Argo Server
+    * serves the API -- vía -- opens up an HTTP(S) listener
+    * [source code](/apiserver/argoserver.go)
 
 ![diagram](assets/diagram.png)
 
