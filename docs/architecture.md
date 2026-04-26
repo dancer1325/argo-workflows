@@ -18,7 +18,9 @@
 
 ## Argo Workflow Overview
 
-The diagram below provides a little more detail as far as namespaces. The Workflow Controller and Argo Server both run in the `argo` namespace. Assuming Argo Workflows was installed as a Cluster Install or as a Managed Namespace Install (described [here](installation.md)), the Workflows and the Pods generated from them run in a separate namespace.
+* Workflow Controller & Argo Server 
+  * run | `argo` namespace
+Assuming Argo Workflows was installed as a Cluster Install or as a Managed Namespace Install (described [here](installation.md)), the Workflows and the Pods generated from them run in a separate namespace.
 
 The internals of a Pod are also shown. Each Step and each DAG Task cause a Pod to be generated, and each of these is composed of 3 containers:
 
