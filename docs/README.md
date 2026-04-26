@@ -12,8 +12,6 @@
 
 ## What is Argo Workflows?
  
-Argo Workflows is implemented as a Kubernetes CRD (Custom Resource Definition).
-
 * Define workflows where each step is a container.
 * Model multi-step workflows as a sequence of tasks or capture the dependencies between tasks using a directed acyclic graph (DAG).
 * Easily run compute intensive jobs for machine learning or data processing in a fraction of the time using Argo Workflows on Kubernetes.
