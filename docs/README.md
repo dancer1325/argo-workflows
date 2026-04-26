@@ -11,8 +11,7 @@
 [![Artifact HUB](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/argo-workflows)](https://artifacthub.io/packages/helm/argo/argo-workflows)
 
 ## What is Argo Workflows?
-
-Argo Workflows is an open source container-native workflow engine for orchestrating parallel jobs on Kubernetes.
+ 
 Argo Workflows is implemented as a Kubernetes CRD (Custom Resource Definition).
 
 * Define workflows where each step is a container.
