@@ -127,11 +127,7 @@ TODO: check MORE / EACH feature?
 
 ## Community Meetings
 
-* TODO: 
-We host monthly community meetings where we and the community showcase demos and discuss the current and future state of the project. Feel free to join us!
-For Community Meeting information, minutes and recordings, please [see here](https://bit.ly/argo-wf-cmty-mtng).
-
-Participation in Argo Workflows is governed by the [CNCF Code of Conduct](https://github.com/cncf/foundation/blob/master/code-of-conduct.md)
+* [here](https://bit.ly/argo-wf-cmty-mtng)
 
 ## Community Blogs and Presentations
 
