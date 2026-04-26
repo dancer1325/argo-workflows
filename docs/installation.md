@@ -56,7 +56,6 @@
 
 ## Additional installation considerations
 
-Review the following:
 
 * [Workflow RBAC](workflow-rbac.md)
 * [Security](security.md).
