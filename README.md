@@ -1,15 +1,3 @@
-<!-- markdownlint-disable-next-line MD041 -->
-[![Security Status](https://github.com/argoproj/argo-workflows/actions/workflows/snyk.yml/badge.svg?branch=main)](https://github.com/argoproj/argo-workflows/actions/workflows/snyk.yml?query=branch%3Amain)
-[![OpenSSF Best Practices](https://bestpractices.coreinfrastructure.org/projects/3830/badge)](https://bestpractices.coreinfrastructure.org/projects/3830)
-[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/argoproj/argo-workflows/badge)](https://api.securityscorecards.dev/projects/github.com/argoproj/argo-workflows)
-[![FOSSA License Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fargoproj%2Fargo-workflows.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fargoproj%2Fargo-workflows?ref=badge_shield)
-[![Slack](https://img.shields.io/badge/slack-argoproj-brightgreen.svg?logo=slack)](https://argoproj.github.io/community/join-slack)
-[![X Follow](https://img.shields.io/twitter/follow/argoproj?style=social)](https://x.com/argoproj)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-argoproj-blue.svg?logo=linkedin)](https://www.linkedin.com/company/argoproj/)
-[![Bluesky](https://img.shields.io/badge/Bluesky-argoproj-blue.svg?style=social&logo=bluesky)](https://bsky.app/profile/argoproj.bsky.social)
-[![Release Version](https://img.shields.io/github/v/release/argoproj/argo-workflows?label=argo-workflows)](https://github.com/argoproj/argo-workflows/releases/latest)
-[![Artifact HUB](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/argo-workflows)](https://artifacthub.io/packages/helm/argo/argo-workflows)
-
 ## What is Argo Workflows?
 
 * Argo Workflows
@@ -48,6 +36,9 @@
 
 1. [Interactive Training Material](https://killercoda.com/argoproj/course/argo-workflows/)
 1. [Access the demo environment](https://workflows.apps.argoproj.io/workflows/argo)
+   * Problems:
+     * Problem1: NOTHING is ALLOWED
+       * Solution: TODO:
 
 ![Screenshot](docs/assets/screenshot.png)
 
